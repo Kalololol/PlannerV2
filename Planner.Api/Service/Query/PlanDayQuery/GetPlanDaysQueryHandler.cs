@@ -5,7 +5,7 @@ using Planner.Domain;
 
 namespace Planner.Api.Service.Query.PlanDayQuery
 {
-    public class GetPlanDaysQueryHandler : IRequestHandler<GetPlanDaysQuery, List<PlanDayDto>
+    public class GetPlanDaysQueryHandler : IRequestHandler<GetPlanDaysQuery, List<PlanDayDto>>
     {
         private readonly IRepository<PlanDay> _planDayRepository;
         private readonly IMapper _mapper;

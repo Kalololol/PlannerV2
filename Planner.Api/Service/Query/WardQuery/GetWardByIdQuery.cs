@@ -7,4 +7,4 @@ namespace Planner.Api.Service.Query.WardQuery
         public int Id { get; set; }
     }
 }
-}
+

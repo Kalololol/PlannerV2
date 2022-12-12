@@ -7,4 +7,4 @@ namespace Planner.Api.Service.Query
         public int Id { get; set; }
     }
 }
-}
+

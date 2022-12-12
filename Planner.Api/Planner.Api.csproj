@@ -22,8 +22,4 @@
     <ProjectReference Include="..\Planner.Domain\Planner.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

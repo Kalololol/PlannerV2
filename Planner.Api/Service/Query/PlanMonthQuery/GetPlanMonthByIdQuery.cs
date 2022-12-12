@@ -7,4 +7,4 @@ namespace Planner.Api.Service.Query.PlanMonthQuery
         public int Id { get; set; }
     }
 }
-}
+

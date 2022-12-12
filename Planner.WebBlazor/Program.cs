@@ -1,5 +1,6 @@
 using MediatR;
 using Planner.Api.Infrastructure;
+using Planner.WebBlazor;
 using Planner.WebBlazor.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,18 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
 var app = builder.Build();
+
+//builder.Services.AddMediatR(typeof(MediatorConfiguration).Assembly);
+
+//builder.Services.AddSingleton(AutoMapperConfig.Initialize());
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7068/") });
+
+builder.Services.AddHttpClient<IContractService, ContractService>
+    (client =>
+    {
+        client.BaseAddress = new Uri(("https://localhost:7068/"));
+    });
 
 builder.Services.AddMediatR(typeof(MediatorConfiguration).Assembly);
 
