@@ -1,0 +1,56 @@
+﻿@page "/employeeall"
+@inject IEmployeeService _employeeService;
+
+@using Planner.Api.Service.Query
+@inject MediatR.IMediator _mediator 
+@inject AutoMapper.IMapper _mapper
+
+<h3>AllEmployee</h3>
+
+<PageTitle>SPG - Pracownicy</PageTitle>
+
+<p><h3>Wszyscy pracownicy</h3> <a href="@("/employeecreate")">Dodaj pracownika</a></p>
+<p>
+
+    @if(employees == null)
+    {
+    <div>
+        <p>Ładowanie.... </p>
+        </div>
+    }
+    else {
+	<TABLE BORDER=1 CELLPADDING=4 RULES=GROUPS FRAME=BOX> <COLGROUP></COLGROUP> <COLGROUP SPAN=3></COLGROUP>      
+        <tr>
+            <th>Imię i Nazwisko</th>
+            <th>Prawo wyk. zawodu</th>
+            <th>Telefon</th>
+        </tr>
+    @foreach(var e in employees)
+    {
+        <tr style="text-align: center; ">
+            <td>@e.Name @e.Surname</td>
+            <td>@e.LicenseNumber</td>
+            <td>@e.PhoneNumber</td>
+            <button class="btn btn-primiary"><a href="@($"/employeedetails/{e.Id}")">Szczegóły</a></button>
+            <button class="btn btn-primiary"><a href="@($"/employeeedit/{e.Id}")">Edycja</a></button>
+        </tr>
+    }
+    <br />
+    </table>
+    }
+</p>
+
+@code {
+    private List<EmployeeViewModel> employees = new List<EmployeeViewModel>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+      
+        employees = await _employeeService.GetAllEmployees();
+        
+
+    }
+
+
+}

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planner.Domain", "Planner.Domain\Planner.Domain.csproj", "{DAD3EDB1-7911-4390-9972-DD517E7DA33B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planner.Domain", "Planner.Domain\Planner.Domain.csproj", "{DAD3EDB1-7911-4390-9972-DD517E7DA33B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planner.Data", "Planner.Data\Planner.Data.csproj", "{9DC05A07-461C-4F63-86E8-FB8B120470E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planner.Data", "Planner.Data\Planner.Data.csproj", "{9DC05A07-461C-4F63-86E8-FB8B120470E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planner.WebBlazor", "Planner.WebBlazor\Planner.WebBlazor.csproj", "{6135ED97-F23D-4B76-AE79-FF59E1711441}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planner.WebBlazor", "Planner.WebBlazor\Planner.WebBlazor.csproj", "{6135ED97-F23D-4B76-AE79-FF59E1711441}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planner.Api", "Planner.Api\Planner.Api.csproj", "{DFEBC212-04C5-4C99-A38D-282A031F1021}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planner.Api", "Planner.Api\Planner.Api.csproj", "{DFEBC212-04C5-4C99-A38D-282A031F1021}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

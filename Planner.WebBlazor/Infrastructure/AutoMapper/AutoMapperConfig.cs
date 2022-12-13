@@ -11,6 +11,7 @@ namespace Planner.WebBlazor.Infrastructure
           {
               cfg.CreateMap<ContractViewModel, ContractDto>().ReverseMap();
               cfg.CreateMap<EmployeeViewModel, EmployeeDto>().ReverseMap();
+
               cfg.CreateMap<PlanDayViewModel, PlanDayDto>().ReverseMap();
               cfg.CreateMap<PlanMonthViewModel, PlanMonthDto>().ReverseMap();
               cfg.CreateMap<RequestViewModel, RequestDto>().ReverseMap();
