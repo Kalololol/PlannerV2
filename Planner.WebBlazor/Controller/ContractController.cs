@@ -53,14 +53,11 @@ namespace Planner.WebBlazor.Controller
             {
                 try
                 {
-                    if (contract == null)
-                        return BadRequest();
+                    if (contract == null) return BadRequest();
 
                     await _mediator.Send(_mapper.Map<CreateContractCommand>(contract));
 
-                    //  return Ok("Dodano");
                     return CreatedAtAction(nameof(GetContractById), new { id = contract.Id }, contract);
-
                 }
                 catch (Exception)
                 {
@@ -90,5 +87,25 @@ namespace Planner.WebBlazor.Controller
                         "Error creating new employee record");
                 }
             }
+
+        [HttpPost]
+        [Route("deleteContract")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<ContractViewModel>> DeleteContract(ContractViewModel contract)
+        {
+            try
+            {
+                if (contract == null) return BadRequest();
+                await _mediator.Send(_mapper.Map<ContractViewModel>(contract));
+
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Error creating new employee record");
+            }
         }
+    }
 }

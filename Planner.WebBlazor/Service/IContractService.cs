@@ -7,6 +7,6 @@ namespace Planner.WebBlazor
         Task<ContractViewModel> GetContractById(int id);
         Task<ContractViewModel> CreateContract(ContractViewModel contract);
         Task<ContractViewModel> EditContract(ContractViewModel contract);
-       // Task<ContractViewModel> DeleteContract(ContractViewModel contract);
+        Task<ContractViewModel> DeleteContract(ContractViewModel contract);
     }
 }
